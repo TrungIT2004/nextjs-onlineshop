@@ -7,7 +7,7 @@ export async function generateStaticParams() {
     const res = await fetch(`https://officex-server.onrender.com/products`)
     const products: any = await res.json()
 
-    return products.map( (product: any) => product?.name)
+    return products?.map( (product: any) => product?.name)
 }
 
 // export async function generateMetaData({ params } : { params: { productName: string }}): Promise<Metadata> {
