@@ -1,3 +1,6 @@
+import withPWA from "@ducanh2912/next-pwa"
+
+
 module.exports = {
   images: {
     domains: ['images.officex.click'], // Replace with your domain
