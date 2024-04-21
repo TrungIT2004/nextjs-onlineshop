@@ -29,7 +29,7 @@ const CategoryProduct = async (props: any) => {
                 <p className="w-[50%] pr-[20px] text-right font-light">Xem thêm...</p>
             </div>
             <ul className="w-[100%] mb-2 flex gap-x-[10%] shadow-xl category-list">
-                {data?.map( (product: any) => {
+                {data && data?.map( (product: any) => {
                     return (
                         <li key={product._id} className="flex flex-col w-[200px]">
                             <ProductCard productImg={product?.productImg} name={product?.name} priceInVND={product?.priceInVND} />
