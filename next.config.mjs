@@ -2,14 +2,14 @@ import withPWAInit from "@ducanh2912/next-pwa"
 
 const withPWA = withPWAInit({
   dest: "public",
-  extendDefaultRuntimeCaching: true,
+  extendDefaultRuntimeCaching: false,
   workboxOptions: {
     runtimeCaching: [
       {
         urlPattern: ({ url }) => {
             return url.pathname.startsWith('/category')
         },
-        handler: "CacheFirst",
+        handler: "CacheOnly",
         options: {
             cacheName: "products",
             cacheableResponse: {
@@ -28,3 +28,4 @@ const withPWA = withPWAInit({
 export default withPWA({
   // Your Next.js config
 })
+
