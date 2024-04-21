@@ -1,5 +1,20 @@
 import ProductCard from "@components/ProductCard"
 
+
+export function generateStaticParams() {
+  return [{category: 'Bìa hổ sơ'}, 
+        {category: 'Thước'}, 
+        {category: 'Giấy'}, 
+        {category: 'Bút chì gỗ'}, 
+        {category: 'Băng keo'},
+        {category: 'Giấy ghi nhớ'},
+        {category: 'Kéo'},
+        {category: 'Máy tính'},
+        {category: 'Tập vỡ'},
+        {category: 'Bút bi'}
+   ]
+}
+
 const Category = async ({params}: { params: { category: string }}) => {
     const category = params?.category
 
@@ -25,3 +40,4 @@ const Category = async ({params}: { params: { category: string }}) => {
 }
 
 export default Category
+

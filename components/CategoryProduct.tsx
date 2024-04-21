@@ -28,7 +28,7 @@ const CategoryProduct = async (props: any) => {
                 <p className="w-[50%] font-bold text-transform:uppercase pl-[10px]">{props.category}</p>
                 <p className="w-[50%] pr-[20px] text-right font-light">Xem thêm...</p>
             </div>
-            <ul className="w-[100%] flex justify-around category-list">
+            <ul className="w-[100%] mb-2 flex gap-x-[10%] shadow-xl category-list">
                 {data.map( (product: any) => {
                     return (
                         <li key={product._id} className="flex flex-col w-[200px]">

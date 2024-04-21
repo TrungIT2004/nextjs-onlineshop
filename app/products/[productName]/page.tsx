@@ -1,27 +1,45 @@
-'use client'
-
-import { useContext } from "react"
-import { CurrentProductContext } from "@components/Provider"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone, faEnvelope, faCheck, faCheckDouble, faCircleCheck} from '@fortawesome/free-solid-svg-icons'
+import { Metadata } from 'next'
 
 
-const page = () => {
-  const { currentProduct }: any = useContext(CurrentProductContext)
+export async function generateStaticParams() {
+    const res = await fetch(`https://officex-server.onrender.com/products`)
+    const products: any = await res.json()
 
- return (
+    return products.map( (product: any) => product?.name)
+}
+
+// export async function generateMetaData({ params } : { params: { productName: string }}): Promise<Metadata> {
+//     const productName = params?.productName
+
+//     const res = await fetch(`https://officex-server.onrender.com/products/${productName}`)
+//     const product: any = await res.json()
+
+//     return {
+//         title: product?.name
+//     }
+// }
+
+const page = async ({ params } : { params: { productName: string }}) => {
+    const productName = params?.productName
+
+    const res = await fetch(`https://officex-server.onrender.com/products/${productName}`)
+    const product = await res.json()
+
+    return (
         <>
-            <p className='bg-red-100 height h-[50px] pl-4 mb-[30px] flex items-center'>Trang chủ / Cửa hàng / {currentProduct?.category} / {currentProduct?.name} </p>
+            <p className='bg-red-100 height h-[50px] pl-4 mb-[30px] flex items-center'>Trang chủ / Cửa hàng / {product?.category} / {product?.name} </p>
 
             <article className='w-[100%] gap-4 pl-[10px] flex flex-col sm:flex-row 2xl:w-[65%] 2xl:m-auto'>
                 <div className='w-[100%] gap-4 flex sm:flex-row sm:w-[65%]'>
                     <div className='w-[100%] sm:w-[50%]'>
-                        <img src={`${currentProduct?.productImg}`} alt={currentProduct?.name} title={currentProduct?.name} loading='lazy' className="w-[250px] aspect-square sm:w-[250px] md:w-[275px] xl:w-[375px] 2xl:w-[400px]" />
+                        <img src={`${product?.productImg}`} alt={product?.name} title={product?.name} loading='lazy' className="w-[250px] aspect-square sm:w-[250px] md:w-[275px] xl:w-[375px] 2xl:w-[400px]" />
                     </div>
                     
                     <div className='w-[100%] h-auto flex flex-col gap-4 sm:w-[50%]'>
-                        <h2 className='text-2xl font-bold'>{currentProduct?.name}</h2>
-                        <p className='text-xl text-red-500'>{currentProduct?.priceInVND} VNĐ</p>
+                        <h2 className='text-2xl font-bold'>{product?.name}</h2>
+                        <p className='text-xl text-red-500'>{product?.priceInVND} VNĐ</p>
                         <p className='text-xl text-blue-600'>Tổng đơn trên 500K FREE SHIP</p>
 
                         <div className='mt-[10px] sm:mt-[50px]'>

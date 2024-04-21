@@ -20,7 +20,7 @@ export const RefinementList = () => {
 
 const RefinementListItem = (props: any) => {
     return (
-        <li className='w-[25%] shadow-lg sm:w-[100%]' >
+        <li className='w-[25%] h-[60px] shadow-lg sm:w-[100%] flex items-center' >
             <Link href={`/category/${props?.title}`} className='w-full flex items-center'>
                 <Image 
                 src={`/assets/icons/${props.imgSrc}`}
