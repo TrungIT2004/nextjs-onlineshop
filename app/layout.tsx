@@ -7,6 +7,7 @@ import Provider from "@components/Provider";
 export const metadata: Metadata = {
   title: "OfficeX",
   description: "An online shop selling office products",
+  manifest: '/manifest.json'
 };
 
 export default function RootLayout({
