@@ -18,7 +18,7 @@ export function generateStaticParams() {
 const Category = async ({params}: { params: { category: string }}) => {
     const category = params?.category
 
-    const res =  await fetch(`https://officex-server.onrender.com/products/filter?category=${category}`)
+    const res =  await fetch(`https://officex-server.onrender.com/products/category/${category}`)
     const filteredProducts = await res.json()
 
     return (

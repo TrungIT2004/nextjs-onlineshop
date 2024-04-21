@@ -19,7 +19,7 @@ const CategoryProducts = () => {
 }
 
 const CategoryProduct = async (props: any) => {
-    const res = await fetch(`https://officex-server.onrender.com/products/filter?category=${props?.category}`)
+    const res = await fetch(`https://officex-server.onrender.com/products/category/${props?.category}`)
     const data: any = await res.json()
 
     return (
