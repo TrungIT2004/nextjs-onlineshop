@@ -3,6 +3,8 @@ import React from 'react'
 
 const SearchResults = async ({ params }: { params: { searchValue: string }}) => {
     const searchValue = decodeURIComponent(params?.searchValue)
+    console.log(searchValue)
+    console.log(`https://officex-server.onrender.com/products/search?q=${searchValue}`)
 
     const res = await fetch(`https://officex-server.onrender.com/products/search?q=${searchValue}`)
     const data: any = await res.json()
