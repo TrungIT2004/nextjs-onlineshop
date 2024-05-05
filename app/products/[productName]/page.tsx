@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone, faEnvelope, faCheck, faCheckDouble, faCircleCheck} from '@fortawesome/free-solid-svg-icons'
 import { Metadata } from 'next'
-
+import Counter from '@components/Counter'
 
 export async function generateStaticParams() {
     const res = await fetch(`https://officex-server.onrender.com/products`)
@@ -10,16 +10,16 @@ export async function generateStaticParams() {
     return products?.map( (product: any) => product?.name)
 }
 
-// export async function generateMetaData({ params } : { params: { productName: string }}): Promise<Metadata> {
-//     const productName = params?.productName
+export async function generateMetaData({ params } : { params: { productName: string }}): Promise<Metadata> {
+    const productName = params?.productName
 
-//     const res = await fetch(`https://officex-server.onrender.com/products/${productName}`)
-//     const product: any = await res.json()
+    const res = await fetch(`https://officex-server.onrender.com/products/${productName}`)
+    const product: any = await res.json()
 
-//     return {
-//         title: product?.name
-//     }
-// }
+    return {
+        title: product?.name
+    }
+}
 
 const page = async ({ params } : { params: { productName: string }}) => {
     const productName = params?.productName
@@ -43,9 +43,7 @@ const page = async ({ params } : { params: { productName: string }}) => {
                         <p className='text-xl text-blue-600'>Tổng đơn trên 500K FREE SHIP</p>
 
                         <div className='mt-[10px] sm:mt-[50px]'>
-                            <button className='w-[40px] h-[40px] border border-blue-300'>-</button>
-                            <button className='w-[40px] h-[40px] border border-blue-300'>0</button>
-                            <button className='w-[40px] h-[40px] mr-[20px] mb-[15px] border border-blue-300'>+</button>
+                            <Counter />
 
                             <button className='w-[150px] h-[50px] bg-blue-400 text-white font-bold sm:w-[auto]'>Thêm vào giỏ hàng</button>
                         </div>
