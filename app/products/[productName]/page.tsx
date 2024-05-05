@@ -10,16 +10,16 @@ export async function generateStaticParams() {
     return products?.map( (product: any) => product?.name)
 }
 
-export async function generateMetaData({ params } : { params: { productName: string }}): Promise<Metadata> {
-    const productName = params?.productName
+// export async function generateMetaData({ params } : { params: { productName: string }}): Promise<Metadata> {
+//     const productName = decodeURIComponent(params?.productName)
 
-    const res = await fetch(`https://officex-server.onrender.com/products/${productName}`)
-    const product: any = await res.json()
+//     const res = await fetch(`https://officex-server.onrender.com/products/${productName}`)
+//     const product: any = await res.json()
 
-    return {
-        title: product?.name
-    }
-}
+//     return {
+//         title: product?.name
+//     }
+// }
 
 const page = async ({ params } : { params: { productName: string }}) => {
     const productName = params?.productName
