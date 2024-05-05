@@ -33,7 +33,7 @@ const Navbar = () => {
                     </li>
 
                     <li className='w-[10%] hidden items-center justify-center md:flex hover:bg-white hover:text-black'>
-                        <Link href='/'>Đăng nhập</Link>
+                        <Link href='/login'>Đăng nhập</Link>
                     </li>
                 </ul>
             </nav>

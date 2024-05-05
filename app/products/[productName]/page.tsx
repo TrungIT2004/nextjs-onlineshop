@@ -29,7 +29,7 @@ const page = async ({ params } : { params: { productName: string }}) => {
 
     return (
         <>
-            <p className='bg-red-100 height h-[50px] pl-4 mb-[30px] flex items-center'>Trang chủ / Cửa hàng / {product?.category} / {product?.name} </p>
+            <p className='bg-red-100 height h-[50px] pl-4 mb-[20px] flex items-center'>Trang chủ / Cửa hàng / {product?.category} / {product?.name} </p>
 
             <article className='w-[100%] gap-4 pl-[10px] flex flex-col sm:flex-row 2xl:w-[65%] 2xl:m-auto'>
                 <div className='w-[100%] gap-4 flex sm:flex-row sm:w-[65%]'>
@@ -53,36 +53,36 @@ const page = async ({ params } : { params: { productName: string }}) => {
                         <p className='font-bold'>Hỗ trợ online</p>
 
                         <ul>
-                            <li className='h-[auto]'>
-                                <FontAwesomeIcon icon={faPhone} style={{color: "#d73747"}} />
-                                <span className='ml-[10px]'>Hotline đặt hàng 1: 0981.654.572 (MS. Nhiên)</span>
+                            <li className='h-[auto] flex items-top'>
+                                <FontAwesomeIcon icon={faPhone} style={{color: "#d73747", width: "20px", height: "15px", marginTop: "5px"}} />
+                                <span className='ml-[10px] mt-[0px]'>Hotline đặt hàng 1: 0981.654.572 (MS. Nhiên)</span>
                             </li>
-                            <li className='h-[auto]'>
-                                 <FontAwesomeIcon icon={faPhone} style={{color: "#d73747"}} />
+                            <li className='h-[auto] flex items-top'>
+                                 <FontAwesomeIcon icon={faPhone} style={{color: "#d73747", width: "20px", height: "15px", marginTop: "5px"}} />
                                 <span className='ml-[10px]'>Hotline đặt hàng 2: 0777. 663.073 (MS. Nhung)</span>
                             </li>
-                            <li className='h-[auto]'>
-                                <FontAwesomeIcon icon={faEnvelope} style={{color: "#f7021b",}} />
+                            <li className='h-[auto] flex items-top'>
+                                <FontAwesomeIcon icon={faEnvelope} style={{color: "#f7021b", width: "20px", height: "15px", marginTop: "5px",}} />
                                 <span className='ml-[10px]'>Email: htmtrung2004@gmail.com</span>
                             </li>
-                            <li className='h-[auto]'>
-                                <FontAwesomeIcon icon={faCheckDouble} style={{color: "#ff0000",}} />
+                            <li className='h-[auto] flex items-top'>
+                                <FontAwesomeIcon icon={faCheckDouble} style={{color: "#ff0000", width: "20px", height: "15px", marginTop: "5px",}} />
                                 <span className='ml-[10px]'>Chính Sách Chiết Khấu Cực Cao</span>
                             </li>
-                            <li className='h-[auto]'>
-                                <FontAwesomeIcon icon={faCircleCheck} style={{color: "#fb0404",}} />
+                            <li className='h-[auto] flex items-top'>
+                                <FontAwesomeIcon icon={faCircleCheck} style={{color: "#fb0404", width: "20px", height: "15px", marginTop: "5px",}} />
                                 <span className='ml-[10px]'>Đơn {'>'} 1 Triệu đến dưới 2 Triệu chiết khấu 7% giá trước VAT (Ngoại Trừ giấy in các loại)</span>
                             </li>
-                            <li className='h-[auto]'>
-                                <FontAwesomeIcon icon={faCircleCheck} style={{color: "#fb0404",}} />
+                            <li className='h-[auto] flex items-top'>
+                                <FontAwesomeIcon icon={faCircleCheck} style={{color: "#fb0404", width: "20px", height: "15px", marginTop: "5px",}} />
                                 <span className='ml-[10px]'>Đơn {'>'} 2 Triệu đến dưới 3 Triệu chiết khấu 8% giá trước VAT (Ngoại Trừ giấy in các loại)</span>
                             </li>
-                            <li className='h-[auto]'>
-                                <FontAwesomeIcon icon={faCircleCheck} style={{color: "#fb0404",}} />
+                            <li className='h-[auto] flex items-top'>
+                                <FontAwesomeIcon icon={faCircleCheck} style={{color: "#fb0404", width: "20px", height: "15px", marginTop: "5px",}} />
                                 <span className='ml-[10px]'>Đơn {'>'} 3 Triệu đến dưới 5 Triệu chiết khấu 10% giá trước VAT (Ngoại Trừ giấy in các loại)</span>
                             </li>
-                            <li className='h-[auto]'>
-                                <FontAwesomeIcon icon={faCircleCheck} style={{color: "#fb0404",}} />
+                            <li className='h-[auto] flex items-top'>
+                                <FontAwesomeIcon icon={faCircleCheck} style={{color: "#fb0404", width: "20px", height: "15px", marginTop: "5px",}} />
                                 <span className='ml-[10px]'>Đơn {'>'} 5 Triệu đến dưới 10 Triệu chiết khấu 12% giá trước VAT (Ngoại Trừ giấy in các loại)</span>
                             </li>
                         </ul>
@@ -94,36 +94,36 @@ const page = async ({ params } : { params: { productName: string }}) => {
                         <p className='text-red-600 font-bold'>Chính sách ưu đãi</p>
                         
                         <ul>
-                            <li>
-                                <FontAwesomeIcon icon={faCircleCheck} style={{color: "61ce70",}} />
+                            <li className='h-[auto] flex items-top'>
+                                <FontAwesomeIcon icon={faCircleCheck} style={{color: "61ce70", width: "20px", height: "15px", marginTop: "5px"}} />
                                 <span className='ml-[10px]'>Miễn phí giao hàng tại HCM Đơn 500K Trở Lên</span>
                             </li>
-                            <li>
-                                <FontAwesomeIcon icon={faCheck} style={{color: "#63E6BE",}} />
+                            <li className='h-[auto] flex items-top'>
+                                <FontAwesomeIcon icon={faCheck} style={{color: "#63E6BE", width: "20px", height: "15px", marginTop: "5px",}} />
                                 <span className='ml-[10px]'>Đơn {'>'} 1 Triệu đến dưới 2 Triệu chiết khấu 7% giá trước VAT (Ngoại Trừ giấy in các loại)</span>
                             </li>
-                            <li>
-                                <FontAwesomeIcon icon={faCheck} style={{color: "#63E6BE",}} />
+                            <li className='h-[auto] flex items-top'>
+                                <FontAwesomeIcon icon={faCheck} style={{color: "#63E6BE", width: "20px", height: "15px", marginTop: "5px",}} />
                                 <span className='ml-[10px]'>Đơn {'>'} 2 Triệu đến dưới 3 Triệu chiết khấu 8% giá trước VAT (Ngoại Trừ giấy in các loại)</span>
                             </li>
-                            <li>
-                                <FontAwesomeIcon icon={faCheck} style={{color: "#63E6BE",}} />
+                            <li className='h-[auto] flex items-top'>
+                                <FontAwesomeIcon icon={faCheck} style={{color: "#63E6BE", width: "20px", height: "15px", marginTop: "5px",}} />
                                 <span className='ml-[10px]'>Đơn {'>'} 3 Triệu đến dưới 5 Triệu chiết khấu 10% giá trước VAT (Ngoại Trừ giấy in các loại)</span>
                             </li>
-                            <li>
-                                <FontAwesomeIcon icon={faCheck} style={{color: "#63E6BE",}} />
+                            <li className='h-[auto] flex items-top'>
+                                <FontAwesomeIcon icon={faCheck} style={{color: "#63E6BE", width: "20px", height: "15px", marginTop: "5px",}} />
                                 <span className='ml-[10px]'>Đơn {'>'} 5 Triệu đến dưới 10 Triệu chiết khấu 12% giá trước VAT (Ngoại Trừ giấy in các loại)</span>
                             </li>
-                            <li>
-                                <FontAwesomeIcon icon={faCircleCheck} style={{color: "61ce70",}} />
+                            <li className='h-[auto] flex items-top'>
+                                <FontAwesomeIcon icon={faCircleCheck} style={{color: "61ce70", width: "20px", height: "15px", marginTop: "5px"}} />
                                 <span className='ml-[10px]'>Nhiều phần quà tặng hấp dẫn</span>
                             </li>
-                            <li>
-                                <FontAwesomeIcon icon={faCircleCheck} style={{color: "61ce70",}} />
+                            <li className='h-[auto] flex items-top'>
+                                <FontAwesomeIcon icon={faCircleCheck} style={{color: "61ce70", width: "20px", height: "15px", marginTop: "5px"}} />
                                 <span className='ml-[10px]'>Giao hàng nhanh</span>
                             </li>
-                            <li>
-                                <FontAwesomeIcon icon={faCircleCheck} style={{color: "61ce70",}} />
+                            <li className='h-[auto] flex items-top'>
+                                <FontAwesomeIcon icon={faCircleCheck} style={{color: "61ce70", width: "20px", height: "15px", marginTop: "5px"}} />
                                 <span className='ml-[10px]'>Đổi trả hàng đúng theo yêu cầu</span>
                             </li>
                         </ul>
@@ -133,12 +133,12 @@ const page = async ({ params } : { params: { productName: string }}) => {
                         <p className='text-red-600 font-bold'>Liên hệ nhân viên đặt hàng</p>
 
                         <ul>
-                            <li>
-                                <FontAwesomeIcon icon={faCircleCheck} style={{color: "61ce70",}} />
+                            <li className='h-[auto] flex items-top'>
+                                <FontAwesomeIcon icon={faCircleCheck} style={{color: "61ce70", width: "20px", height: "15px", marginTop: "5px"}} />
                                 <span className='ml-[10px]'>Hotline đặt hàng 1: 0981. 654.572 (MS. Nhiên)</span>
                             </li>
-                            <li>
-                                <FontAwesomeIcon icon={faCircleCheck} style={{color: "61ce70",}} />
+                            <li className='h-[auto] flex items-top'>
+                                <FontAwesomeIcon icon={faCircleCheck} style={{color: "61ce70", width: "20px", height: "15px", marginTop: "5px"}} />
                                 <span className='ml-[10px]'>Hotline đặt hàng 2: 0777. 663.073 (MS. Nhung)</span>
                             </li>
                         </ul>
