@@ -63,6 +63,4 @@ module.exports = withPWA({
       },
     ],
   },
-  output: "export",
-  pathname: "/nextjs-onlineshop"
 })
