@@ -1,33 +1,13 @@
-import withPWAInit from "@ducanh2912/next-pwa"
 
-const withPWA = withPWAInit({
-  dest: "public",
-  extendDefaultRuntimeCaching: false,
-  workboxOptions: {
-    runtimeCaching: [
-      {
-        urlPattern: ({ url }) => {
-            return url.pathname.startsWith('/category')
-        },
-        handler: "CacheOnly",
-        options: {
-            cacheName: "products",
-            cacheableResponse: {
-                statuses: [0, 200]
-            }
-            // expiration: {
-            //     maxEntries: 4,
-            //     maxAgeSeconds: 365 * 24 * 60 * 60, // 365 days
-            // },
-        }
-      }
-    ],
-  },
-})
 
-export default withPWA({
-  // Your Next.js config
-  output: 'export',
-  basePath: '/nextjs-onlineshop',
-})
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+	// Configure `pageExtensions`` to include MDX files
+	pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
+	// Optionally, add any other Next.js config below
+	output: "export", // Will export all routes as static html
+	basePath: "/nextjs-onlineshop",
+};
 
+// Merge MDX config with Next.js config
+export default nextConfig
