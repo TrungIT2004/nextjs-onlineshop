@@ -27,5 +27,7 @@ const withPWA = withPWAInit({
 
 export default withPWA({
   // Your Next.js config
+  output: 'export',
+  basePath: '/nextjs-onlineshop',
 })
 
